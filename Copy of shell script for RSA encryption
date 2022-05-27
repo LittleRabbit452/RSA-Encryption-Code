@@ -1,0 +1,83 @@
+Python 3.9.7 (default, Sep 16 2021, 16:59:28) on Windows (64 bits).
+This is the Pyzo interpreter with integrated event loop for PYQT5.
+Type 'help' for help, type '?' for a list of *magic* commands.
+
+Kernel process terminated for restart. (0)
+
+Python 3.9.7 (default, Sep 16 2021, 16:59:28) on Windows (64 bits).
+This is the Pyzo interpreter with integrated event loop for PYQT5.
+Type 'help' for help, type '?' for a list of *magic* commands.
+Running script: "C:\Users\emman\Desktop\owenpki.py"
+p= 45377
+q= 116539
+n= 5288190203
+phin= 5288028288
+e= 65537
+d= 3880835201
+False
+Prime length  309  digits
+A length  154  digits
+B length  155  digits
+Shared Secret (ALICE):  0x13c9371b6095b5638feca8fa6cd029a7a65f76d6aa45b72b2f7860e23c24054eca552c1f99ce3b513534e7390d26c45ea8a4fd19e58b5f564b4a3c4dd72e4b6f2fcbdc584f0707e64b17b00408e8536b48ede5767707eadd57c593550ac0415a732ef2a81e84495850f300671108c7da3ec2a400ab0086f85f90362a10e22e973
+Shared Secret (BOB):  0x13c9371b6095b5638feca8fa6cd029a7a65f76d6aa45b72b2f7860e23c24054eca552c1f99ce3b513534e7390d26c45ea8a4fd19e58b5f564b4a3c4dd72e4b6f2fcbdc584f0707e64b17b00408e8536b48ede5767707eadd57c593550ac0415a732ef2a81e84495850f300671108c7da3ec2a400ab0086f85f90362a10e22e973
+
+>>> p=52081
+
+>>> p
+52081
+
+>>> q=52981
+
+>>> phin=2759198400
+
+>>> phin = (p-1)*(q-1)
+
+>>> phin
+2759198400
+
+>>> d=modinv(e,phin)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'e' is not defined
+
+>>> d = modinv (e, phin)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'e' is not defined
+
+>>> e=65537
+
+>>> e
+65537
+
+>>> d = modinv (e, phin)
+
+>>> d
+1438099073
+
+>>> public =(e,n)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'n' is not defined
+
+>>> n = (p*q)
+
+>>> n
+2759303461
+
+>>> public = (e,n)
+
+>>> public
+(65537, 2759303461)
+
+>>> private = (d, n)
+
+>>> private
+(1438099073, 2759303461)
+
+>>> plaintext = 422776367987
+
+>>> pow(plaintext, e, n)
+906177984
+
+>>> 
